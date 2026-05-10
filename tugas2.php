@@ -1,33 +1,17 @@
 <?php
-$studioChoice = 5; 
+$studioChoice = 5;
 
 echo "<h2>Studio Selection Results</h2>";
 
-if ($studioChoice == 1) {
-    echo "**Warner Bros.** - Showing: *The Batman*";
-} 
-else if ($studioChoice == 2) {
-    echo "**Universal Pictures** - Showing: *Oppenheimer*";
-} 
-elseif ($studioChoice == 3) {
-    echo "**Walt Disney Studios** - Showing: *The Lion King*";
-} 
-elseif ($studioChoice == 4) {
-    echo "**Sony Pictures** - Showing: *Spider-Man: Across the Spider-Verse*";
-} 
-else if ($studioChoice == 5) {
-    echo "**Paramount Pictures** - Showing: *Top Gun: Maverick*";
-} 
-elseif ($studioChoice == 6) {
-    echo "**20th Century Studios** - Showing: *Avatar: The Way of Water*";
-} 
-else if ($studioChoice == 7) {
-    echo "**Lionsgate** - Showing: *John Wick: Chapter 4*";
-} 
-elseif ($studioChoice == 8) {
-    echo "**A24** - Showing: *Everything Everywhere All At Once*";
-} 
-else {
-    echo "Invalid Selection. Please choose a studio between 1 and 8.";
-}
+echo match ($studioChoice) {
+    1 => "**Warner Bros.** - Showing: *The Batman*",
+    2 => "**Universal Pictures** - Showing: *Oppenheimer*",
+    3 => "**Walt Disney Studios** - Showing: *The Lion King*",
+    4 => "**Sony Pictures** - Showing: *Spider-Man: Across the Spider-Verse*",
+    5 => "**Paramount Pictures** - Showing: *Top Gun: Maverick*",
+    6 => "**20th Century Studios** - Showing: *Avatar: The Way of Water*",
+    7 => "**Lionsgate** - Showing: *John Wick: Chapter 4*",
+    8 => "**A24** - Showing: *Everything Everywhere All At Once*",
+    default => "Invalid Selection. Please choose a studio between 1 and 8.",
+};
 ?>
